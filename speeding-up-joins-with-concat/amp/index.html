@@ -2,38 +2,52 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Hiking Out - North Glacier Pass Trip</title>
+    <title>Speeding up joins with Concat()</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="../../north-glacier-pass-trip-hiking-out.4">
+    <link rel="canonical" href="../index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="Charlie Brumbaugh's Blog">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hiking Out - North Glacier Pass Trip">
-    <meta property="og:description" content="There was a waterfall on the rocks above camp from the snowmelt and after breakfast I headed back across the suncups along Thousand Island lake to get to the trail.">
-    <meta property="og:url" content="https://charliebrumbaugh.github.io/north-glacier-pass-trip-hiking-out/">
-    <meta property="og:image" content="https://charliebrumbaugh.github.io/content/images/2019/03/small--9--2.JPG">
-    <meta property="article:published_time" content="2019-03-24T02:39:22.000Z">
-    <meta property="article:modified_time" content="2019-04-26T05:49:05.000Z">
-    <meta property="article:tag" content="2017 Adventure">
-    <meta property="article:tag" content="North Glacier Pass Trip">
-    <meta property="article:tag" content="Ritter Range">
+    <meta property="og:title" content="Speeding up joins with Concat()">
+    <meta property="og:description" content="I recently had a project where I needed import a very large number of records
+from one database to another. All of the records are unique and in order to move
+them as quickly as possible, a left join was needed to make sure that the data
+didn't get imported twice.
+
+This table had about 6 NOT NULL fields and the unique constraint was on the
+combination of those fields. Now it was possible to join straight from one of
+the tables to the other using those fields in the JOIN like
+
+LEFT JOIN table A
+O">
+    <meta property="og:url" content="https://charliebrumbaugh.github.io/speeding-up-joins-with-concat/">
+    <meta property="article:published_time" content="2019-10-13T19:56:53.000Z">
+    <meta property="article:modified_time" content="2019-10-13T19:56:53.000Z">
+    <meta property="article:tag" content="Programming">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hiking Out - North Glacier Pass Trip">
-    <meta name="twitter:description" content="There was a waterfall on the rocks above camp from the snowmelt and after breakfast I headed back across the suncups along Thousand Island lake to get to the trail.">
-    <meta name="twitter:url" content="https://charliebrumbaugh.github.io/north-glacier-pass-trip-hiking-out/">
-    <meta name="twitter:image" content="https://charliebrumbaugh.github.io/content/images/2019/03/small--9--1.JPG">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Speeding up joins with Concat()">
+    <meta name="twitter:description" content="I recently had a project where I needed import a very large number of records
+from one database to another. All of the records are unique and in order to move
+them as quickly as possible, a left join was needed to make sure that the data
+didn't get imported twice.
+
+This table had about 6 NOT NULL fields and the unique constraint was on the
+combination of those fields. Now it was possible to join straight from one of
+the tables to the other using those fields in the JOIN like
+
+LEFT JOIN table A
+O">
+    <meta name="twitter:url" content="https://charliebrumbaugh.github.io/speeding-up-joins-with-concat/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Charlie Brumbaugh">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="2017 Adventure, North Glacier Pass Trip, Ritter Range">
-    <meta property="og:image:width" content="520">
-    <meta property="og:image:height" content="390">
+    <meta name="twitter:data2" content="Programming">
     
     <script type="application/ld+json">
 {
@@ -61,18 +75,12 @@
         "url": "https://charliebrumbaugh.github.io/author/charlie/",
         "sameAs": []
     },
-    "headline": "Hiking Out - North Glacier Pass Trip",
-    "url": "https://charliebrumbaugh.github.io/north-glacier-pass-trip-hiking-out/",
-    "datePublished": "2019-03-24T02:39:22.000Z",
-    "dateModified": "2019-04-26T05:49:05.000Z",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://charliebrumbaugh.github.io/content/images/2019/03/P6267778.JPG",
-        "width": 1520,
-        "height": 1140
-    },
-    "keywords": "2017 Adventure, North Glacier Pass Trip, Ritter Range",
-    "description": "There was a waterfall on the rocks above camp from the snowmelt and after breakfast I headed back across the suncups along Thousand Island lake to get to the trail.",
+    "headline": "Speeding up joins with Concat()",
+    "url": "https://charliebrumbaugh.github.io/speeding-up-joins-with-concat/",
+    "datePublished": "2019-10-13T19:56:53.000Z",
+    "dateModified": "2019-10-13T19:56:53.000Z",
+    "keywords": "Programming",
+    "description": "I recently had a project where I needed import a very large number of records\nfrom one database to another. All of the records are unique and in order to move\nthem as quickly as possible, a left join was needed to make sure that the data\ndidn&#x27;t get imported twice.\n\nThis table had about 6 NOT NULL fields and the unique constraint was on the\ncombination of those fields. Now it was possible to join straight from one of\nthe tables to the other using those fields in the JOIN like\n\nLEFT JOIN table A\nO",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://charliebrumbaugh.github.io/"
@@ -104,18 +112,29 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">Hiking Out - North Glacier Pass Trip</h1>
+                <h1 class="post-title">Speeding up joins with Concat()</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/charlie/">Charlie Brumbaugh</a></p>
-                    <time class="post-date" datetime="2019-03-24">2019-03-24</time>
+                    <time class="post-date" datetime="2019-10-13">2019-10-13</time>
                 </section>
             </header>
-            <figure class="post-image">
-                <amp-img src="https://charliebrumbaugh.github.io/content/images/2019/03/P6267778.JPG" width="600" height="400" layout="responsive"></amp-img>
-            </figure>
             <section class="post-content">
 
-                <p>I woke up much later than I had been for the last five days of alpine starts, it was nice not to have to get started in the dark.</p><p>There was a waterfall on the rocks above camp from the snowmelt and after breakfast I headed back across the suncups along Thousand Island lake to get to the trail.</p><figure class="kg-card kg-image-card"></figure><p>I stopped at the end of Thousand Island Lake to take some pictures, about this time I met the first people I had seen in 5 days, there was a group of 4 guys hiking the PCT sleeping next to the trail and a couple other groups.</p><figure class="kg-card kg-image-card"><figcaption>Looking back up to North Glacier Pass</figcaption></figure><p>After this point there was more hard going to get over the ridge and back down the the trail. Eventually I was able to find the trail and then it was pretty uneventful hiking all the way back to the trail head.</p><p><a href="../../parker-pass-trip-hike-in/">Continued</a></p><p><a href="../../north-glacier-pass-trip-electra-peak/">Previous</a></p>
+                <p>I recently had a project where I needed import a very large number of records from one database to another. All of the records are unique and in order to move them as quickly as possible, a left join was needed to make sure that the data didn't get imported twice.</p><p>This table had about 6 NOT NULL fields and the unique constraint was on the combination of those fields. Now it was possible to join straight from one of the tables to the other using those fields in the JOIN like</p><blockquote>
+<p>LEFT JOIN table A<br>
+ON B.field1 = A.field1<br>
+AND B.field2 = A.field2</p>
+</blockquote>
+<p>However joining on multiple fields is rather slow. Because the combination of fields is unique, what I did in order to speed this up was to create a match field that held the combined string of all the other fields into one.</p><blockquote>
+<p>UPDATE table A<br>
+SET matchfield = CONCAT(field1,field2)<br>
+WHERE matchfield IS NULL;</p>
+</blockquote>
+<p>That enabled me to join both tables on a single field, which in turn made the join and then the import much faster.</p><blockquote>
+<p>LEFT JOIN table A<br>
+ON B.matchfield = A.matchfield</p>
+</blockquote>
+<p>The one caveat here is that if the match field is out of date, then the joins will not work correctly and you will get duplicate field errors on insert or data will not be inserted because the match field says it already was.</p>
 
             </section>
 
